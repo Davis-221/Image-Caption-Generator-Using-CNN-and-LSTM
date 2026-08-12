@@ -1,0 +1,99 @@
+{% extends "base1.html" %}
+{% block title %}Image Caption Generator{% endblock %}
+{% block content %}
+
+<html>
+<head>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing:border-box;
+        }
+        body
+        {
+            font-family: verdana;
+            background-repeat:no-repeat;
+            background-attached:fixed;
+            background-size:cover;
+            background-image:url({{url_for('static', filename='images/background_image1.gif')}});
+        }
+        .banner-area{
+            width:100%;
+            height:100vh;
+            background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+            background-size:cover;
+
+        }
+        .content-area{
+            height:100%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        .content{
+            text-align:center;
+        }
+        .content h1{
+            font-size:80px;
+            color:#fff;
+        }
+        input[type="file"]{
+            display:none;
+        }
+        label[for="file"]{
+            color: white;
+            height: 60px;
+            width: 250px;
+            background-color: #ff2020 ;
+            position: absolute;
+            margin: auto;
+            top:250;
+            bottom:0;
+            left:0;
+            right:300;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        input[type="submit"]{
+            display:none;
+        }
+        label[for="submit"]{
+            color: white;
+            height: 60px;
+            width: 250px;
+            background-color: #2020ff ;
+            position: absolute;
+            margin: auto;
+            top:250;
+            bottom:0;
+            left:300;
+            right:0;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="banner-area">
+        <div class="content-area">
+            <div class="content">
+
+                <h1>Image Caption Generator</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+{% endblock %}
